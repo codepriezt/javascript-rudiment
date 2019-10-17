@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name":"john clever",
+        "phone": "903-3432-123454",
+        "company":"nivebrds"
+    
+    },
+    {
+        "id":2,
+        "name":"john smart",
+        "phone": "903-3432-4453454",
+        "company":"nativebrands"
+    
+    },
+    {
+        "id":3,
+        "name":"john don",
+        "phone": "503-3432-123454",
+        "company":"brands"
+    
+    },
+    {
+        "id":4,
+        "name":"john dododo",
+        "phone": "903-3432-123454",
+        "company":"native"
+    
+    }
+]
