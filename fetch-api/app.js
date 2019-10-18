@@ -4,42 +4,33 @@ document.getElementById('button3').addEventListener('click' , generateApi)
 
 function getData(){
     fetch('data.txt')
-    .then(function(res){
-        return res.text()
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById('output').innerHTML = data
     })
-    .then(function(data){
-        // document.getElementById('output').innerHTML = data
-    })
-    .catch(function(err){
-        console.log(err);
-    });
+    .catch(err => console.log(err));
 }
 
 
 function getJson(){
     fetch('customers.json')
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(data){ 
+    .then(res => res.json())
+    .then(data => { 
         let output = '';
         data.forEach(function(customer){
             output += `<li>${customer.name}</li>`;
         });
         document.getElementById('output').innerHTMl = output;
     })
-    .catch(function(err){
-        console.log(err);
-    });
+    .catch(err => console.log(err));
+        
 }
 
 
 function generateApi(){
     fetch('https://api.github.com/users')
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(data){ 
+    .then(res => res.json()) 
+    .then(data => { 
         console.log(data)
         let output = '';
         data.forEach(function(user){
@@ -47,7 +38,5 @@ function generateApi(){
         });
         document.getElementById('output').innerHTMl = output;
     })
-    .catch(function(err){
-        console.log(err);
-    });
+    .catch(err => console.log(err));
 }
